@@ -1,0 +1,24 @@
+{
+  "name": "7bc2ae18596e5cc495891fd351a9a837",
+  "version": "1.0.0",
+  "main": "trabalho-final.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gist.github.com/7bc2ae18596e5cc495891fd351a9a837.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gist.github.com/7bc2ae18596e5cc495891fd351a9a837"
+  },
+  "homepage": "https://gist.github.com/7bc2ae18596e5cc495891fd351a9a837",
+  "description": "",
+  "devDependencies": {
+    "mocha": "^11.5.0"
+  }
+}
