@@ -1,0 +1,41 @@
+name: Pipeline de Testes - Projeto Pets
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 23 * * *'  # Todos os dias às 8h da noite (horário BR)
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clonar o repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Instalar dependências
+        run: |
+          npm install
+
+      - name: Rodar testes com Allure
+        run: |
+          npm test
+
+      - name: Gerar relatório Allure
+        run: |
+          npm run allure:generate
+
+      - name: Publicar relatório como artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report
+
