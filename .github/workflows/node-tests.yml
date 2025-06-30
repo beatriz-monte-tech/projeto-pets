@@ -26,8 +26,9 @@ jobs:
           npm install
 
       - name: Corrigir permissões dos binários
-        run: chmod +x node_modules/.bin/mocha
-             chmod +x node_modules/.bin/allure                  
+        run: |
+            chmod +x node_modules/.bin/mocha
+            chmod +x node_modules/.bin/allure                 
 
       - name: Rodar testes com Allure
         run: |
