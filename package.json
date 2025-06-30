@@ -6,7 +6,8 @@
   "scripts": {
     "test": "npx mocha --reporter allure-mocha",
     "allure:generate": "allure generate allure-results --clean -o allure-report",
-    "allure:open": "allure open allure-report"
+    "allure:open": "allure open allure-report",
+    "postinstall": "chmod +x node_modules/.bin/mocha node_modules/.bin/allure node_modules/allure-commandline/dist/bin/allure"
   },
   "repository": {
     "type": "git",
