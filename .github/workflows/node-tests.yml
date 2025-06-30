@@ -25,6 +25,9 @@ jobs:
         run: |
           npm install
 
+      - name: Corrigir permissão do mocha
+        run: chmod +x node_modules/.bin/mocha          
+
       - name: Rodar testes com Allure
         run: |
           npm test
